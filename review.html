@@ -1,0 +1,1017 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Customer Reviews | Advance Polypathic Pharmaceuticals</title>
+
+    <meta name="description"
+        content="Read customer reviews and share your experience with Advance Polypathic Pharmaceuticals Limited.">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f5f7fb;
+            color: #222;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #0b5ed7;
+            color: white;
+            padding: 25px 15px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 28px;
+            margin-bottom: 6px;
+        }
+
+        header p {
+            font-size: 15px;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 900px;
+            margin: 35px auto;
+        }
+
+        .review-form-box {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            margin-bottom: 35px;
+        }
+
+        .review-form-box h2 {
+            color: #0b5ed7;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 7px;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 13px;
+            border: 1px solid #ccc;
+            border-radius: 7px;
+            font-size: 15px;
+            outline: none;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            border-color: #0b5ed7;
+        }
+
+        .form-group textarea {
+            min-height: 130px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 14px;
+            border: none;
+            border-radius: 7px;
+            background: #0b5ed7;
+            color: white;
+            font-size: 17px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .submit-btn:hover {
+            background: #084298;
+        }
+
+        .submit-btn:disabled {
+            background: #999;
+            cursor: not-allowed;
+        }
+
+        .message {
+            margin-top: 15px;
+            padding: 13px;
+            border-radius: 7px;
+            display: none;
+            word-break: break-word;
+        }
+
+        .message.success {
+            display: block;
+            background: #d1e7dd;
+            color: #0f5132;
+        }
+
+        .message.error {
+            display: block;
+            background: #f8d7da;
+            color: #842029;
+        }
+
+        .reviews-section h2 {
+            color: #0b5ed7;
+            margin-bottom: 20px;
+        }
+
+       #reviewsContainer {
+    display: grid;
+    gap: 25px;
+}
+
+.review-card {
+    position: relative;
+    background: #ffffff;
+    padding: 35px 35px 30px;
+    border-radius: 22px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+    overflow: hidden;
+}
+
+.review-card::before {
+    content: "“";
+    position: absolute;
+    top: 5px;
+    left: 22px;
+    font-size: 90px;
+    line-height: 1;
+    font-weight: bold;
+    color: #00c98b;
+    opacity: 0.9;
+}
+
+.review-card::after {
+    content: "”";
+    position: absolute;
+    right: 25px;
+    bottom: -10px;
+    font-size: 90px;
+    line-height: 1;
+    font-weight: bold;
+    color: #00c98b;
+    opacity: 0.9;
+}
+
+.review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 15px;
+    margin-top: 35px;
+    margin-bottom: 5px;
+}
+
+.review-header h3 {
+    color: #222;
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.review-header span {
+    color: #777;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.review-stars {
+    color: #00c98b;
+    font-size: 24px;
+    letter-spacing: 3px;
+    margin: 8px 0 20px;
+}
+
+.review-card p {
+    color: #666;
+    font-size: 18px;
+    line-height: 1.8;
+    margin: 0;
+    white-space: pre-wrap;
+    position: relative;
+    z-index: 1;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+
+    .review-card {
+        padding: 25px 22px 30px;
+        border-radius: 20px;
+    }
+
+    .review-card::before {
+        font-size: 70px;
+        left: 15px;
+    }
+
+    .review-card::after {
+        font-size: 70px;
+        right: 15px;
+    }
+
+    .review-header {
+        margin-top: 30px;
+        flex-direction: column;
+        gap: 3px;
+    }
+
+    .review-header h3 {
+        font-size: 23px;
+    }
+
+    .review-header span {
+        font-size: 14px;
+    }
+
+    .review-stars {
+        font-size: 22px;
+        letter-spacing: 2px;
+        margin-bottom: 15px;
+    }
+
+    .review-card p {
+        font-size: 17px;
+        line-height: 1.7;
+    }
+}
+
+        .loading {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            color: #666;
+        }
+
+        .error-details {
+            margin-top: 10px;
+            font-size: 12px;
+            color: #842029;
+            background: #fff;
+            padding: 10px;
+            border-radius: 6px;
+            overflow-wrap: anywhere;
+        }
+
+        footer {
+            margin-top: 50px;
+            padding: 25px 15px;
+            text-align: center;
+            background: #222;
+            color: white;
+            font-size: 14px;
+        }
+
+        @media (max-width: 600px) {
+
+            header h1 {
+                font-size: 22px;
+            }
+
+            .container {
+                width: 94%;
+                margin: 25px auto;
+            }
+
+            .review-form-box {
+                padding: 18px;
+            }
+
+            .review-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- HEADER -->
+
+    <header>
+
+        <h1>Customer Reviews</h1>
+
+        <p>
+            Advance Polypathic Pharmaceuticals Limited
+        </p>
+
+    </header>
+
+
+    <!-- MAIN -->
+
+    <main class="container">
+
+
+        <!-- REVIEW FORM -->
+
+        <section class="review-form-box">
+
+            <h2>Share Your Review</h2>
+
+
+            <form id="reviewForm">
+
+
+                <!-- NAME -->
+
+                <div class="form-group">
+
+                    <label for="name">
+                        Your Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Enter your name"
+                        maxlength="100"
+                        required>
+
+                </div>
+
+
+                <!-- RATING -->
+
+                <div class="form-group">
+
+                    <label for="rating">
+                        Rating
+                    </label>
+
+                    <select
+                        id="rating"
+                        name="rating"
+                        required>
+
+                        <option value="">
+                            Select Rating
+                        </option>
+
+                        <option value="5">
+                            ★★★★★ - 5 Stars
+                        </option>
+
+                        <option value="4">
+                            ★★★★☆ - 4 Stars
+                        </option>
+
+                        <option value="3">
+                            ★★★☆☆ - 3 Stars
+                        </option>
+
+                        <option value="2">
+                            ★★☆☆☆ - 2 Stars
+                        </option>
+
+                        <option value="1">
+                            ★☆☆☆☆ - 1 Star
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- REVIEW -->
+
+                <div class="form-group">
+
+                    <label for="review">
+                        Your Review
+                    </label>
+
+                    <textarea
+                        id="review"
+                        name="review"
+                        placeholder="Write your experience..."
+                        maxlength="1000"
+                        required></textarea>
+
+                </div>
+
+
+                <!-- SUBMIT -->
+
+                <button
+                    type="submit"
+                    id="submitBtn"
+                    class="submit-btn">
+
+                    Submit Review
+
+                </button>
+
+
+                <!-- MESSAGE -->
+
+                <div
+                    id="message"
+                    class="message">
+                </div>
+
+
+            </form>
+
+        </section>
+
+
+        <!-- CUSTOMER REVIEWS -->
+
+        <section class="reviews-section">
+
+            <h2>
+                Customer Reviews
+            </h2>
+
+
+            <div id="reviewsContainer">
+
+                <div class="loading">
+                    Loading reviews...
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        © 2026 Advance Polypathic Pharmaceuticals Limited.
+        All Rights Reserved.
+
+    </footer>
+
+
+
+    <!-- SUPABASE -->
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+
+    <script>
+
+        /* =====================================================
+           SUPABASE CONFIGURATION
+        ===================================================== */
+
+
+        const SUPABASE_URL =
+            "https://wzzcowcdasooouwbficp.supabase.co";
+
+
+        const SUPABASE_PUBLISHABLE_KEY =
+"sb_publishable_nHr0O_VhDXBTOjJwTdWJWQ_y3xKGrhH";
+        /* =====================================================
+           CREATE SUPABASE CLIENT
+        ===================================================== */
+
+        const db = window.supabase.createClient(
+            SUPABASE_URL,
+            SUPABASE_PUBLISHABLE_KEY
+        );
+
+
+        /* =====================================================
+           ELEMENTS
+        ===================================================== */
+
+        const reviewForm =
+            document.getElementById("reviewForm");
+
+        const reviewsContainer =
+            document.getElementById("reviewsContainer");
+
+        const submitBtn =
+            document.getElementById("submitBtn");
+
+        const message =
+            document.getElementById("message");
+
+
+        /* =====================================================
+           SHOW MESSAGE
+        ===================================================== */
+
+        function showMessage(text, type) {
+
+            message.textContent = text;
+
+            message.className =
+                "message " + type;
+
+        }
+
+
+        /* =====================================================
+           ESCAPE HTML
+        ===================================================== */
+
+        function escapeHTML(value) {
+
+            const div =
+                document.createElement("div");
+
+            div.textContent =
+                value ?? "";
+
+            return div.innerHTML;
+
+        }
+
+
+        /* =====================================================
+           LOAD REVIEWS
+        ===================================================== */
+
+        async function loadReviews() {
+
+            reviewsContainer.innerHTML = `
+                <div class="loading">
+                    Loading reviews...
+                </div>
+            `;
+
+
+            try {
+
+                const result =
+                    await db
+                        .from("reviews")
+                        .select(
+                            "id, created_at, name, rating, review"
+                        )
+                        .order(
+                            "created_at",
+                            {
+                                ascending: false
+                            }
+                        );
+
+
+                const data =
+                    result.data;
+
+                const error =
+                    result.error;
+
+
+                console.log(
+                    "LOAD DATA:",
+                    data
+                );
+
+                console.log(
+                    "LOAD ERROR:",
+                    error
+                );
+
+
+                if (error) {
+
+                    console.error(
+                        "Supabase SELECT error:",
+                        error
+                    );
+
+
+                    reviewsContainer.innerHTML = `
+
+                        <div class="review-card">
+
+                            <h3>
+                                Unable to load reviews
+                            </h3>
+
+                            <p>
+                                Supabase connection or permission error.
+                            </p>
+
+                            <div class="error-details">
+                                ${escapeHTML(
+                                    error.message ||
+                                    "Unknown error"
+                                )}
+                            </div>
+
+                        </div>
+
+                    `;
+
+                    return;
+
+                }
+
+
+                if (!data || data.length === 0) {
+
+                    reviewsContainer.innerHTML = `
+
+                        <div class="review-card">
+
+                            <h3>
+                                No reviews yet
+                            </h3>
+
+                            <p>
+                                Be the first customer to submit a review.
+                            </p>
+
+                        </div>
+
+                    `;
+
+                    return;
+
+                }
+
+
+                reviewsContainer.innerHTML = "";
+
+
+                data.forEach(
+                    function (item) {
+
+                        const reviewCard =
+                            document.createElement("div");
+
+
+                        reviewCard.className =
+                            "review-card";
+
+
+                        const rating =
+                            Math.max(
+                                0,
+                                Math.min(
+                                    5,
+                                    Number(item.rating) || 0
+                                )
+                            );
+
+
+                        let stars = "";
+
+
+                        for (
+                            let i = 1;
+                            i <= 5;
+                            i++
+                        ) {
+
+                            if (i <= rating) {
+
+                                stars += "★";
+
+                            } else {
+
+                                stars += "☆";
+
+                            }
+
+                        }
+
+
+                        let date = "";
+
+
+                        if (item.created_at) {
+
+                            date =
+                                new Date(
+                                    item.created_at
+                                ).toLocaleDateString(
+                                    "en-IN"
+                                );
+
+                        }
+
+
+                        reviewCard.innerHTML = `
+
+                            <div class="review-header">
+
+                                <h3>
+                                    ${escapeHTML(
+                                        item.name ||
+                                        "Anonymous"
+                                    )}
+                                </h3>
+
+                                <span>
+                                    ${escapeHTML(date)}
+                                </span>
+
+                            </div>
+
+
+                            <div class="review-stars">
+
+                                ${stars}
+
+                            </div>
+
+
+                            <p>
+
+                                ${escapeHTML(
+                                    item.review ||
+                                    ""
+                                )}
+
+                            </p>
+
+                        `;
+
+
+                        reviewsContainer.appendChild(
+                            reviewCard
+                        );
+
+                    }
+                );
+
+            }
+
+            catch (err) {
+
+                console.error(
+                    "Unexpected LOAD error:",
+                    err
+                );
+
+
+                reviewsContainer.innerHTML = `
+
+                    <div class="review-card">
+
+                        <h3>
+                            Unable to load reviews
+                        </h3>
+
+                        <div class="error-details">
+                            ${escapeHTML(
+                                err.message ||
+                                String(err)
+                            )}
+                        </div>
+
+                    </div>
+
+                `;
+
+            }
+
+        }
+
+
+
+        /* =====================================================
+           SUBMIT REVIEW
+        ===================================================== */
+
+        reviewForm.addEventListener(
+            "submit",
+            async function (e) {
+
+                e.preventDefault();
+
+
+                submitBtn.disabled = true;
+
+
+                showMessage(
+                    "Submitting review...",
+                    "success"
+                );
+
+
+                try {
+
+
+                    const name =
+                        document
+                            .getElementById("name")
+                            .value
+                            .trim();
+
+
+                    const rating =
+                        Number(
+                            document
+                                .getElementById("rating")
+                                .value
+                        );
+
+
+                    const review =
+                        document
+                            .getElementById("review")
+                            .value
+                            .trim();
+
+
+                    /* =========================
+                       VALIDATION
+                    ========================== */
+
+
+                    if (
+                        !name ||
+                        !review ||
+                        !rating
+                    ) {
+
+                        showMessage(
+                            "Please fill all fields.",
+                            "error"
+                        );
+
+                        submitBtn.disabled = false;
+
+                        return;
+
+                    }
+
+
+                    if (
+                        rating < 1 ||
+                        rating > 5
+                    ) {
+
+                        showMessage(
+                            "Rating must be between 1 and 5.",
+                            "error"
+                        );
+
+                        submitBtn.disabled = false;
+
+                        return;
+
+                    }
+
+
+                    /* =========================
+                       SUPABASE INSERT
+                    ========================== */
+
+
+                    console.log(
+                        "Submitting:",
+                        {
+                            name: name,
+                            rating: rating,
+                            review: review
+                        }
+                    );
+
+
+                    const result =
+                        await db
+                            .from("reviews")
+                            .insert([
+                                {
+                                    name: name,
+                                    rating: rating,
+                                    review: review
+                                }
+                            ]);
+
+
+                    const error =
+                        result.error;
+
+
+                    console.log(
+                        "INSERT RESULT:",
+                        result
+                    );
+
+
+                    /* =========================
+                       INSERT ERROR
+                    ========================== */
+
+
+                    if (error) {
+
+                        console.error(
+                            "Supabase INSERT error:",
+                            error
+                        );
+
+
+                        showMessage(
+                            "Review submit nahi hua: " +
+                            (error.message ||
+                                "Unknown Supabase error"),
+                            "error"
+                        );
+
+
+                        submitBtn.disabled = false;
+
+                        return;
+
+                    }
+
+
+                    /* =========================
+                       SUCCESS
+                    ========================== */
+
+
+                    showMessage(
+                        "Thank you! Your review has been submitted successfully.",
+                        "success"
+                    );
+
+
+                    reviewForm.reset();
+
+
+                    await loadReviews();
+
+
+                    submitBtn.disabled = false;
+
+                }
+
+
+                catch (err) {
+
+                    console.error(
+                        "Unexpected SUBMIT error:",
+                        err
+                    );
+
+
+                    showMessage(
+                        "Error: " +
+                        (err.message ||
+                            String(err)),
+                        "error"
+                    );
+
+
+                    submitBtn.disabled = false;
+
+                }
+
+            }
+        );
+
+
+
+        /* =====================================================
+           INITIAL LOAD
+        ===================================================== */
+
+        loadReviews();
+
+    </script>
+
+
+</body>
+
+</html>
